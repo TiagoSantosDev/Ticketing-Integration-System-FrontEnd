@@ -1,0 +1,26 @@
+<div class="col-md-6 col-md-offset-3" style="color:black;font-family:verdana">
+    <h1 class="p" >Add new connection </h1>
+    <h2>Insert connection name: </h2>
+    <br>
+  
+    <form name="buttons">
+      <input class="form-control" type="text" placeholder="Connection name"  [(ngModel)]="model"  #varId="ngModel" required>
+    
+      <h2>Insert client name: </h2>
+      <br>
+    
+      <input class="form-control" type="text" placeholder="Client name"  [(ngModel)]="model2"  #varId="ngModel" required>
+    
+      <h2>Insert endpoint address: </h2>
+      <br>
+    
+      <input class="form-control" type="text" placeholder="Endpoint address"  [(ngModel)]="model3"  #varId="ngModel" required>
+      
+      <button  (click)="adicionaConexao()" ng-disabled="buttons.$invalid"> Add connection </button>
+      <button  (click)="model=null"> Clear fields </button>
+
+    </form>
+
+
+  </div>
+  

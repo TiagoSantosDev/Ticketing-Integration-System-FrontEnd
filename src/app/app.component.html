@@ -1,0 +1,16 @@
+<img src="favicon.ico" height= "75" width= ""/><h1>&nbsp;&nbsp;{{title}}&nbsp;&nbsp;</h1>
+
+<div class="customHr"></div>
+<nav>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a routerLink="/dashboard">Home</a>
+  <a *ngIf="!userInfo" routerLink="/criar-conexao">Insert new Connection</a>
+  <a *ngIf="!userInfo" routerLink="/editar-conexao">Edit/Consult connections</a>
+  <a *ngIf="!userInfo" routerLink="/editar-mapeamento">Edit mapping</a>
+  <a *ngIf="!userInfo" routerLink="/consultar-historico">Consult logs</a>
+  <a *ngIf="!userInfo" routerLink="/register">Registration</a>
+  <a *ngIf="!userInfo" routerLink="/login">Login</a>
+  <a *ngIf="userInfo"  routerLink="/login">Exit</a>
+</nav>
+<hr style="height:15px;border-top:5px solid #F7941E" />
+<router-outlet></router-outlet>

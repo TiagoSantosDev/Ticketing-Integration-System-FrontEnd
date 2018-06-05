@@ -1,0 +1,19 @@
+container {
+    height:100px;
+    overflow:scroll;
+}
+
+nav ul{
+    height:200px;
+    width:18%;
+}
+
+nav ul{
+    overflow:hidden;
+    overflow-y:scroll;
+}
+h1{
+    color: #737373;
+    font-family: Verdana;
+    font-weight: lighter;
+}
