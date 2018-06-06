@@ -14,7 +14,6 @@
             box-sizing: border-box;
         }
 
-        /* Create three equal columns that floats next to each other */
         .column {
             float: left;
             width: 400px;
@@ -22,7 +21,6 @@
             height: 300px;
         }
 
-        /* Clear floats after the columns */
         .row:after {
             content: "";
             display: table;
@@ -32,15 +30,21 @@
         #button {
             position:relative;
             transition: .5s ease;
-            top: 50%;
-            left: 20%;
+            top: 75%;
+            left: 10%;
         }
 
         #text {
             position:relative;
             transition: .5s ease;
-            top: 50%;
+            top: 70%;
             left: 20%;
+        }
+
+        #sel2 {
+            position:relative;
+            transition: .5s ease;
+            top: 30%;
         }
 
 
@@ -56,40 +60,36 @@
 
 
    <body>
-
-        <h2>Edit Mapping</h2>
-
-            <p></p>
-
-            <div class="row">
-            <div class="column" style="background-color:rgb(255, 255, 255);">
-
-                <b>Select client:</b>
-                <select id="client" name="client">
-                    <option value="primark">PRIMARK</option>
-                    <option value="sears">SEARS</option>
-                    <option value="Primark">WIGGLE</option>
-                </select>
-                <p></p>
-                <b>Add client fields:</b>
-                <input type="text" id="fname" name="firstname" placeholder="Client field">
-                <p></p>
-                <b>Client Specific fields</b>
-                <select multiple class="form-control" style='width:300px;height:150px'></select>
-            </div>
-            <div class="column" style="background-color:rgb(255, 255, 255);">
-                <h2>Column 2</h2>
-                <p id="text"> <----------------->  </p>
-                <button id="button" ng-disabled=""> Add mapping</button>
-                
-            </div>
-            <div class="column" style="background-color:rgb(255, 255, 255);">
-                <h2>Column 3</h2>
-                <p>OLR Specific fields</p>
-                <select multiple class="form-control" style='width:300px;height:150px'></select>
-            </div>
-            </div>
-
+    <h2>Edit Mapping</h2>
+    <p></p>
+    <div class="row">
+       <div class="column" style="background-color:rgb(255, 255, 255);">
+          <b>Select client:</b>
+          <select id="client" name="client">
+             <option value="primark">PRIMARK</option>
+             <option value="sears">SEARS</option>
+             <option value="Primark">WIGGLE</option>
+          </select>
+          <p></p>
+          <b>Add client fields:</b>
+          <input type="text" id="fname" name="firstname" placeholder="Client field">
+          <p></p>
+          <b>Client Specific fields</b>
+          <select multiple class="form-control" style='width:300px;height:150px'></select>
+       </div>
+       <div class="column" style="background-color:rgb(255, 255, 255);">
+          <input [(ngModel)]="olrField" (ngModelChange)="title=$event"  type="Ytext">
+          <input class="form-control" id="text" type="text" placeholder="Client Field"  [(ngModel)]="clientField"  #varId="ngModel" required>
+          <p id="text"> <-------------->  </p>
+          <input class="form-control" is="text" type="text" placeholder="OLR Field"  [(ngModel)]="OLRField"  #varId="ngModel" required>
+          <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
+          <button id="button" ng-disabled=""> Clear fields </button>
+       </div>
+       <div class="column" style="background-color:rgb(255, 255, 255);">
+          <p>OLR Specific fields</p>
+          <select multiple class="form-control" id="sel2" style='width:300px;height:150px'></select>
+       </div>
+    </div>
    </body>
 
 </html>

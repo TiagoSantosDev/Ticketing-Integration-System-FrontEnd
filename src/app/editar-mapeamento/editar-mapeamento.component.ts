@@ -8,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class EditarMapeamentoComponent implements OnInit {
 
   
+  public clientFields: String[] = [];
+  public OLRFields: String[] = [];
+  public olrField;
+
+  public getFields() {
+    console.log('ola');
+    console.log(this.olrField);
+  }
+  
 
   constructor() {}
 
   
-
   ngOnInit() {
   }
 

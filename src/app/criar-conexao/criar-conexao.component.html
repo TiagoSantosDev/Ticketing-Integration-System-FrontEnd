@@ -1,26 +1,32 @@
-<div class="col-md-6 col-md-offset-3" style="color:black;font-family:verdana">
-    <h1 class="p" >Add new connection </h1>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Add new Client </h1>
+
     <h2>Insert connection name: </h2>
     <br>
-  
-    <form name="buttons">
-      <input class="form-control" type="text" placeholder="Connection name"  [(ngModel)]="model"  #varId="ngModel" required>
-    
-      <h2>Insert client name: </h2>
-      <br>
-    
-      <input class="form-control" type="text" placeholder="Client name"  [(ngModel)]="model2"  #varId="ngModel" required>
-    
-      <h2>Insert endpoint address: </h2>
-      <br>
-    
-      <input class="form-control" type="text" placeholder="Endpoint address"  [(ngModel)]="model3"  #varId="ngModel" required>
-      
-      <button  (click)="adicionaConexao()" ng-disabled="buttons.$invalid"> Add connection </button>
-      <button  (click)="model=null"> Clear fields </button>
 
-    </form>
+    <input class="form-control" type="text" id="connectionName" placeholder="Connection name"  [(ngModel)]="connection"  #varId="ngModel">
 
+    <h2>Insert client name: </h2>
+    <br>
+
+    <input class="form-control" type="text" id="cli" placeholder="Client Name"  [(ngModel)]="client"  #varId="ngModel">
+
+    <h2>Insert endpoint address: </h2>
+    <br>
+
+    <input class="form-control" type="text" id="end" placeholder="Endpoint address"  [(ngModel)]="endpoint"  #varId="ngModel">
+
+    <br>
+    <button [disabled]="!model.trim()" (click)="addClient()"> Add Client </button>
+    <button [disabled]="!model.trim()" (click)="connection=null; client=null; endpoint=null"> Clear fields </button>
 
   </div>
-  
+</body>

@@ -7,7 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./criar-conexao.component.css']
 })
 export class CriarConexaoComponent implements OnInit {
+
+  public clientName: String;
+  public connectionName: String;
+  public endpoint = String;
   
+
+  addClient(){
+    console.log(this.clientName);
+  }
 
   constructor(private router: Router) { }
   
