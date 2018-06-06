@@ -79,9 +79,9 @@
        </div>
        <div class="column" style="background-color:rgb(255, 255, 255);">
           <input [(ngModel)]="olrField" (ngModelChange)="title=$event"  type="Ytext">
-          <input class="form-control" id="text" type="text" placeholder="Client Field"  [(ngModel)]="clientField"  #varId="ngModel" required>
+          <input class="form-control" id="text" type="text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel" required>
           <p id="text"> <-------------->  </p>
-          <input class="form-control" is="text" type="text" placeholder="OLR Field"  [(ngModel)]="OLRField"  #varId="ngModel" required>
+          <input class="form-control" is="text" type="text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" required>
           <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
           <button id="button" ng-disabled=""> Clear fields </button>
        </div>
