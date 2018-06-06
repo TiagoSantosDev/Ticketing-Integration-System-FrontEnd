@@ -7,18 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarConexaoComponent implements OnInit {
 
-  model4 = '';
-  model5 = '';
+  public clientName: String;
+  public connectionName: String;
+  public endpoint: String;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  editClient(){
+    console.log(this.connectionName);
+    console.log(this.clientName);
+    console.log(this.endpoint);
+
+  }
+
   actualizarConexao(){
     var num1 = ((document.getElementById("cli") as HTMLInputElement).value);
     var num2 = ((document.getElementById("end") as HTMLInputElement).value);
-    console.log("Chegou aqui");
   }
 
 }

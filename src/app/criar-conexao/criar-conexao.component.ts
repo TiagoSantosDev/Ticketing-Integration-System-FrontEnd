@@ -8,15 +8,21 @@ import { Router } from '@angular/router';
 })
 export class CriarConexaoComponent implements OnInit {
 
-  public client: String;
-  public connection: String;
+  public clientName: String;
+  public connectionName: String;
   public endpoint: String;
+
+  //public Connection: Connection[] = [];
   
 
   addClient(){
-    console.log(this.connection);
-    console.log(this.client);
+    console.log(this.connectionName);
+    console.log(this.clientName);
     console.log(this.endpoint);
+
+    
+
+
 
   }
 

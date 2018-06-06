@@ -12,12 +12,12 @@
     <h2>Insert connection name: </h2>
     <br>
 
-    <input class="form-control" type="text" id="connectionName" placeholder="Connection name"  [(ngModel)]="connection"  #varId="ngModel">
+    <input class="form-control" type="text" id="connectionName" placeholder="Connection name"  [(ngModel)]="connectionName"  #varId="ngModel">
 
     <h2>Insert client name: </h2>
     <br>
 
-    <input class="form-control" type="text" id="cli" placeholder="Client Name"  [(ngModel)]="client"  #varId="ngModel">
+    <input class="form-control" type="text" id="cli" placeholder="Client Name"  [(ngModel)]="clientName"  #varId="ngModel">
 
     <h2>Insert endpoint address: </h2>
     <br>
@@ -26,7 +26,7 @@
 
     <br>
     <button [disabled]="!model.trim()" (click)="addClient()"> Add Client </button>
-    <button [disabled]="!model.trim()" (click)="connection=null; client=null; endpoint=null"> Clear fields </button>
+    <button [disabled]="!model.trim()" (click)="connectionName=null; clientName=null; endpoint=null"> Clear fields </button>
 
   </div>
 </body>
