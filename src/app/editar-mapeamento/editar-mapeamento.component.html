@@ -5,8 +5,6 @@
             width: 30%;
             padding: 12px;
             border: 1px solid #ccc;
-            margin-top: 6px;
-            margin-bottom: 16px;
             resize: vertical;
         }     
         
@@ -63,32 +61,49 @@
     <h2>Edit Mapping</h2>
     <p></p>
     <div class="row">
+
+
        <div class="column" style="background-color:rgb(255, 255, 255);">
           <b>Select client:</b>
+
           <select id="client" name="client">
              <option value="primark">PRIMARK</option>
              <option value="sears">SEARS</option>
              <option value="Primark">WIGGLE</option>
           </select>
+
           <p></p>
           <b>Add client fields:</b>
           <input type="text" id="fname" name="firstname" placeholder="Client field">
           <p></p>
           <b>Client Specific fields</b>
-          <select multiple class="form-control" style='width:300px;height:150px'></select>
+          <select multiple class="form-control" style='width:300px;height:150px;'></select>
        </div>
+
        <div class="column" style="background-color:rgb(255, 255, 255);">
-          <input [(ngModel)]="olrField" (ngModelChange)="title=$event"  type="Ytext">
-          <input class="form-control" id="text" type="text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel" required>
-          <p id="text"> <-------------->  </p>
-          <input class="form-control" is="text" type="text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" required>
-          <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
-          <button id="button" ng-disabled=""> Clear fields </button>
+
+        <img src="arrow.png" width="" height="75">
+
+        <input class="form-control" type= "text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel" style="margin-top: 100px;"  required>
+        <input class="form-control" type= "text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" style="margin-bottom: 50px; margin-left: 200px" required>
+        <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
+        <button id="button" ng-disabled="" > Clear fields </button>
+
+
+
+
+
+
+
        </div>
-       <div class="column" style="background-color:rgb(255, 255, 255);">
-          <p>OLR Specific fields</p>
-          <select multiple class="form-control" id="sel2" style='width:300px;height:150px'></select>
+
+
+       <div class="column" style="background-color:rgb(255, 255, 255); margin-top:50px;">
+            <b>Client Specific fields</b>
+            <select multiple class="form-control" id="sel2" style='width:300px;height:150px'></select>
        </div>
+
+
     </div>
    </body>
 

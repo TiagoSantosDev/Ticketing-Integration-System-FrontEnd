@@ -13,10 +13,10 @@ export class EditarMapeamentoComponent implements OnInit {
   public olrField;
 
   public getFields() {
-    console.log('ola');
     console.log(this.olrField);
   }
   
+
 
   constructor() {}
 
@@ -24,9 +24,5 @@ export class EditarMapeamentoComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
-
-  
-
 }
+

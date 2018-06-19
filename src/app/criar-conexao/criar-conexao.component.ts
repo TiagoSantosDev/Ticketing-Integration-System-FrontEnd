@@ -20,10 +20,6 @@ export class CriarConexaoComponent implements OnInit {
     console.log(this.clientName);
     console.log(this.endpoint);
 
-    
-
-
-
   }
 
   constructor(private router: Router) { }
