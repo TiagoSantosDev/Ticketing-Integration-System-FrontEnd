@@ -35,8 +35,6 @@
         #text {
             position:relative;
             transition: .5s ease;
-            top: 70%;
-            left: 20%;
         }
 
         #sel2 {
@@ -84,22 +82,17 @@
 
         <img src="arrow.png" width="" height="75">
 
-        <input class="form-control" type= "text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel" style="margin-top: 100px;"  required>
-        <input class="form-control" type= "text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" style="margin-bottom: 50px; margin-left: 200px" required>
+        <input class="form-control" type= "text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel"  required>
+        <input class="form-control" type= "text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" style="margin-left: 200px; margin-bottom: 70%" required>
         <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
         <button id="button" ng-disabled="" > Clear fields </button>
-
-
-
-
-
-
 
        </div>
 
 
-       <div class="column" style="background-color:rgb(255, 255, 255); margin-top:50px;">
-            <b>Client Specific fields</b>
+       <div class="column" style="background-color:rgb(255, 255, 255)">
+            <p></p>
+            <b style="margin-top: 60%">Client Specific fields</b>
             <select multiple class="form-control" id="sel2" style='width:300px;height:150px'></select>
        </div>
 

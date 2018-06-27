@@ -28,3 +28,6 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
+src/app/demo/demo.component.html
+src/app/demo/demo.component.ts
+src/app/demo/demo.component.spec.ts
