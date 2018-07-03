@@ -7,13 +7,13 @@
   
   <body>
     <div class="col-md-6 col-md-offset-3">
-      <h1>Edit/Consult existing connections </h1>
-      <h2>Select connection: </h2>
+      <h1>Edit existing clients </h1>
+      <h2>Select client: </h2>
       <br>
   
       <div class="container">                                        
         <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Connection
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Client Name
           <span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li><a href="#">HTML</a></li>
@@ -22,16 +22,21 @@
           </ul>
         </div>
       </div>
-  
-      <h2>Edit client name: </h2>
+
+      <h2>Edit client initials: </h2>
       <br>
   
-      <input class="form-control" type="text" id="cli" placeholder="Nome do Cliente"  [(ngModel)]="clientName"  #varId="ngModel">
+      <input class="form-control" type="text" id="cli" placeholder="Client Initials"  [(ngModel)]="clientName"  #varId="ngModel">
+  
+      <h2>Edit connection name: </h2>
+      <br>
+  
+      <input class="form-control" type="text" id="cli" placeholder="Connection Name"  [(ngModel)]="clientName"  #varId="ngModel">
   
       <h2>Edit endpoint: </h2>
       <br>
   
-      <input class="form-control" type="text" id="end" placeholder="Endereço do endpoint"  [(ngModel)]="endpoint"  #varId="ngModel">
+      <input class="form-control" type="text" id="end" placeholder="Endpoint Address"  [(ngModel)]="endpoint"  #varId="ngModel">
   
       <br>
       <button [disabled]="!model.trim()" (click)="actualizarConexao()"> Update connection </button>

@@ -5,10 +5,9 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a routerLink="/dashboard">Home</a>
   <a *ngIf="!userInfo" routerLink="/criar-conexao">Add New Client</a>
-  <a *ngIf="!userInfo" routerLink="/editar-conexao">Edit/Consult Client Data</a>
+  <a *ngIf="!userInfo" routerLink="/editar-conexao">Edit Client Data</a>
   <a *ngIf="!userInfo" routerLink="/editar-mapeamento">Edit mapping</a>
   <a *ngIf="!userInfo" routerLink="/consultar-historico">Consult logs</a>
-  <a *ngIf="!userInfo" routerLink="/register">Register</a>
   <a *ngIf="!userInfo" routerLink="/login">Login</a>
   <a *ngIf="userInfo"  routerLink="/login">Exit</a>
 </nav>

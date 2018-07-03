@@ -1,103 +1,63 @@
-<html lang="en">
-
-    <style>
-        input[type=text], select, textarea {
-            width: 30%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            resize: vertical;
-        }     
-        
-        * {
-            box-sizing: border-box;
-        }
-
-        .column {
-            float: left;
-            width: 400px;
-            padding: 10px;
-            height: 300px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        #button {
-            position:relative;
-            transition: .5s ease;
-            top: 75%;
-            left: 10%;
-        }
-
-        #text {
-            position:relative;
-            transition: .5s ease;
-        }
-
-        #sel2 {
-            position:relative;
-            transition: .5s ease;
-            top: 30%;
-        }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
 
-    </style>
-    
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-   </head>
-
-
-   <body>
-    <h2>Edit Mapping</h2>
+<body>
+    <h1>Edit Mapping</h1>
     <p></p>
     <div class="row">
 
+        <div class="column" style="background-color:rgb(255, 255, 255);">
+            <b>Select client:</b>
+            <select id="client" name="client">
+                <option value="primark">Client A</option>
+                <option value="sears">SEARS</option>
+                <option value="Primark">WIGGLE</option>
+            </select>
 
-       <div class="column" style="background-color:rgb(255, 255, 255);">
-          <b>Select client:</b>
-
-          <select id="client" name="client">
-             <option value="primark">PRIMARK</option>
-             <option value="sears">SEARS</option>
-             <option value="Primark">WIGGLE</option>
-          </select>
-
-          <p></p>
-          <b>Add client fields:</b>
-          <input type="text" id="fname" name="firstname" placeholder="Client field">
-          <p></p>
-          <b>Client Specific fields</b>
-          <select multiple class="form-control" style='width:300px;height:150px;'></select>
-       </div>
-
-       <div class="column" style="background-color:rgb(255, 255, 255);">
-
-        <img src="arrow.png" width="" height="75">
-
-        <input class="form-control" type= "text" placeholder="Client Field"  [(ngModel)]="clientFields"  #varId="ngModel"  required>
-        <input class="form-control" type= "text" placeholder="OLR Field"  [(ngModel)]="OLRFields"  #varId="ngModel" style="margin-left: 200px; margin-bottom: 70%" required>
-        <button id="button" ng-disabled="" (click)="getFields()"> Add mapping</button>
-        <button id="button" ng-disabled="" > Clear fields </button>
-
-       </div>
-
-
-       <div class="column" style="background-color:rgb(255, 255, 255)">
             <p></p>
-            <b style="margin-top: 60%">Client Specific fields</b>
-            <select multiple class="form-control" id="sel2" style='width:300px;height:150px'></select>
-       </div>
+            <b>Add client fields:</b>
+            <input type="text" id="fname" name="firstname" placeholder="Client field">
+            <p></p>
+            <b>Client Specific fields</b>
+            <select multiple class="form-control" style='width:300px;height:150px;'>
+                <option value="primark">Field A</option>
+                <option value="sears">Field B</option>
+                <option value="Primark">Field C</option>
+            </select>
+        </div>
 
+
+        <form>
+            <br><br><br><br><br><br><br><br><br>
+            <label for="company">
+                <b>Client Field</b>
+                <input type="text" id="company" style="float:left; width:120px" />
+            </label>
+            <label for="contact">
+                <b style="margin-left : 80px">OLR Field</b>
+                <input type="text" id="contact" style="float:right; width:120px" />
+            </label>
+            <br><br><br><br><br>
+            <p></p><p></p>
+            <button id="button" ng-disabled="" (click)="getFields()" align="left"> Add mapping</button>
+            <button id="button" ng-disabled="" align="left"> Clear fields </button>
+
+        </form>
+
+
+        <div class="column" style="background-color:rgb(255, 255, 255)">
+            <b>OLR Specific fields</b>
+            <select multiple class="form-control" style='width:300px;height:150px'>
+                <option value="primark">Field 1</option>
+                <option value="sears">Field 2</option>
+                <option value="Primark">Field 3</option>
+            </select>
+        </div>
 
     </div>
-   </body>
-
-</html>
