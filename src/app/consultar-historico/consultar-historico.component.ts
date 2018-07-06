@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultarHistoricoComponent implements OnInit {
 
+
+  Tickets: Array<String> = [
+    "Ticket1", "Ticket2", "Ticket3"
+  ];
+
+
   constructor() { }
 
   ngOnInit() {

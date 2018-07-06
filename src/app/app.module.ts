@@ -22,8 +22,6 @@ import { EditarConexaoComponent } from './editar-conexao/editar-conexao.componen
 import { EditarMapeamentoComponent } from './editar-mapeamento/editar-mapeamento.component';
 import { ConsultarHistoricoComponent } from './consultar-historico/consultar-historico.component';
 
-
-
 @NgModule({
   imports: [
     BrowserModule,

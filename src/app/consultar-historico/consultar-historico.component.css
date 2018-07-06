@@ -1,0 +1,25 @@
+h1{
+    color: #737373;
+    font-family: Verdana;
+    font-weight: lighter;
+}
+
+.tr-hover {
+    cursor: pointer
+}
+.text-center {
+    text-align: center
+}
+.wide {
+    width: 100%
+}
+.center {
+	margin-left: 300px; 
+	margin-right: 0px;
+	text-align: center !important;
+}
+
+.task-container {
+	padding-top:20px;
+	padding-bottom:20px;
+}

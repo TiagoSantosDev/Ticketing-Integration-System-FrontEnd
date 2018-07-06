@@ -16,8 +16,6 @@ export class CriarConexaoComponent implements OnInit {
 
   public submitMessage: String;
 
-
-
   Clients: Array<String> = [
     "Primark", "Sears", "Wiggle"
   ];
@@ -39,7 +37,6 @@ export class CriarConexaoComponent implements OnInit {
       this.submitMessage = "One or more fields are empty. All fields are required";
     }
 
-    
   }
 
   constructor(private router: Router) { }
