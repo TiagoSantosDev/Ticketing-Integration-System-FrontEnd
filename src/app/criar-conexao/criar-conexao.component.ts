@@ -9,16 +9,35 @@ import { Router } from '@angular/router';
 export class CriarConexaoComponent implements OnInit {
 
   public clientName: String;
+  public clientInitials: String;
   public connectionName: String;
   public endpoint: String;
+  public client: String;
 
-  //public Connection: Connection[] = [];
-  
+  public submitMessage: String;
+
+
+
+  Clients: Array<String> = [
+    "Primark", "Sears", "Wiggle"
+  ];
 
   addClient(){
     console.log(this.connectionName);
     console.log(this.clientName);
     console.log(this.endpoint);
+
+
+    if(this.clientName != ""){
+      this.submitMessage = "Client successfully added";
+    }else{
+      this.submitMessage = "One or more fields are empty. All fields are required";
+    }
+
+    this.clientName= "";
+    this.clientInitials= "";
+    this.connectionName= "";
+    this.endpoint= "";
   }
 
   constructor(private router: Router) { }

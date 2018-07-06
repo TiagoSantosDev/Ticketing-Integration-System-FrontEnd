@@ -11,6 +11,7 @@ import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 
+import { ClientesService } from './services/clientes.service';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthGuard } from './guards/auth.guard';
 import { RegisterComponent } from './register/register.component';
@@ -20,7 +21,7 @@ import { CriarConexaoComponent } from './criar-conexao/criar-conexao.component';
 import { EditarConexaoComponent } from './editar-conexao/editar-conexao.component';
 import { EditarMapeamentoComponent } from './editar-mapeamento/editar-mapeamento.component';
 import { ConsultarHistoricoComponent } from './consultar-historico/consultar-historico.component';
-//import { DemoComponent } from './demo/demo.component';
+
 
 
 @NgModule({
@@ -41,12 +42,13 @@ import { ConsultarHistoricoComponent } from './consultar-historico/consultar-his
     EditarConexaoComponent,
     EditarMapeamentoComponent,
     ConsultarHistoricoComponent,
-    //DemoComponent
   ],
   providers: [AuthGuard,
     AuthenticationService,
     MessageService,
-    RegisterService ],
+    RegisterService,
+    ClientesService
+   ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

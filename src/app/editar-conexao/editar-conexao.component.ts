@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../models/client';
+import { ClientesService } from '../services/clientes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-conexao',
@@ -11,10 +14,28 @@ export class EditarConexaoComponent implements OnInit {
   public connectionName: String;
   public endpoint: String;
 
-  constructor() { }
+  public clientes: Client[] = [];
+
+  constructor(
+    private clientesService: ClientesService) {
+  }
 
   ngOnInit() {
+
+    this.clientesService.getClientes()
+      .subscribe(clientes => {
+        this.clientes = clientes;
+      })
+
+      console.log(this.clientes);
+
   }
+
+  //List with all clients
+  Clients: Array<String> = [
+    "Primark", "Sears", "Wiggle"
+  ];
+
 
   editClient(){
     console.log(this.connectionName);

@@ -22,6 +22,12 @@ export class AppComponent {
         this.userInfo = userInfo;
         this.cdr.detectChanges();
       });
+
+      console.log("Ola");
+
+
+
+
   }
   ngOnDestroy() {
     this.subscriptionAuth.unsubscribe();

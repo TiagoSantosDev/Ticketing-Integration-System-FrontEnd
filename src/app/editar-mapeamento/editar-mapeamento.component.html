@@ -1,63 +1,54 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+<h1>Edit Mapping</h1>
+<p></p>
+<div class="row">
 
+    <div class="column" style="background-color:rgb(255, 255, 255);">
+        <b>Select client:</b>
+        <select class="form-control" type="text" [(ngModel)]="levelNum">
+                <option *ngFor="let client of Clients" [ngValue]="client">{{client}}</option>
+        </select>
 
-<body>
-    <h1>Edit Mapping</h1>
-    <p></p>
-    <div class="row">
-
-        <div class="column" style="background-color:rgb(255, 255, 255);">
-            <b>Select client:</b>
-            <select id="client" name="client">
-                <option value="primark">Client A</option>
-                <option value="sears">SEARS</option>
-                <option value="Primark">WIGGLE</option>
-            </select>
-
-            <p></p>
-            <b>Add client fields:</b>
-            <input type="text" id="fname" name="firstname" placeholder="Client field">
-            <p></p>
-            <b>Client Specific fields</b>
-            <select multiple class="form-control" style='width:300px;height:150px;'>
-                <option value="primark">Field A</option>
-                <option value="sears">Field B</option>
-                <option value="Primark">Field C</option>
-            </select>
-        </div>
-
-
-        <form>
-            <br><br><br><br><br><br><br><br><br>
-            <label for="company">
-                <b>Client Field</b>
-                <input type="text" id="company" style="float:left; width:120px" />
-            </label>
-            <label for="contact">
-                <b style="margin-left : 80px">OLR Field</b>
-                <input type="text" id="contact" style="float:right; width:120px" />
-            </label>
-            <br><br><br><br><br>
-            <p></p><p></p>
-            <button id="button" ng-disabled="" (click)="getFields()" align="left"> Add mapping</button>
-            <button id="button" ng-disabled="" align="left"> Clear fields </button>
-
-        </form>
-
-
-        <div class="column" style="background-color:rgb(255, 255, 255)">
-            <b>OLR Specific fields</b>
-            <select multiple class="form-control" style='width:300px;height:150px'>
-                <option value="primark">Field 1</option>
-                <option value="sears">Field 2</option>
-                <option value="Primark">Field 3</option>
-            </select>
-        </div>
-
+        <p></p>
+        <b>Add client fields:</b>
+        <input class="form-control" type="text" id="cli" placeholder="Client Field" [(ngModel)]="input"  #varId="ngModel">
+        <button id="button" (click)="addClientFields()" style="position: absolute;left: 170px; top: 315px;"> Add field</button>
+        <p></p>
+        <b>Client Specific fields</b>
+        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="levelNum">
+            <option *ngFor="let fieldA of ClientFields" [ngValue]="fieldA">{{fieldA}}</option>
+        </select>
     </div>
+
+    <form>
+        <br><br><br><br><br><br><br><br>
+        <label for="clientField" style="width:300px;height:120px">  
+            <b>Client Field</b><br>
+            <img src="https://img.freepik.com/free-icon/double-horizontal-arrow-pointing-to-both-sides_318-66602.jpg?size=338&ext=jpg"
+                style="float:right; height: 60px; width:80px">
+        </label>
+
+        <label for="olrField">
+            <b style="margin-left : 80px">OLR Field</b>
+        </label>
+        <p></p>
+        <p></p>
+
+        <button id="button" ng-disabled="" (click)="getFields()" style="position: absolute; left: 560px;top: 500px;"> Add mapping</button>
+        <button [disabled]="!model.trim()" (click)="clientField=null; olrField=null" style="position: absolute; left: 690px;top: 500px;"> Clear fields </button>
+    </form>
+
+
+    <div class="column" style="background-color:rgb(255, 255, 255); position: absolute; left: 1000px;top: 340px;">
+        <b>OLR Specific fields</b>
+        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="levelNum">
+                <option *ngFor="let fieldB of OLRFields" [ngValue]="fieldB">{{fieldB}}</option>
+        </select>
+    </div>
+
+</div>
+
+<div>
+    <input class="form-control" type="text" id="cli" placeholder="Client Field" style="position: absolute; left: 410px;top: 410px; width:120px"  [(ngModel)]="clientField"  #varId="ngModel">
+
+    <input class="form-control" type="text" placeholder="OLR Field"style="position: absolute; left: 810px;top: 410px; width:120px"  [(ngModel)]="olrField"  #varId="ngModel">
+</div>
