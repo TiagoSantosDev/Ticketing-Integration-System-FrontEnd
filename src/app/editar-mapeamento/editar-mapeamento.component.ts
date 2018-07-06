@@ -30,6 +30,7 @@ export class EditarMapeamentoComponent implements OnInit {
       this.olrField = "";
 
       console.log(this.ClientSelectedFields);
+      console.log(this.OLRSelectedFields);
 
       
     } else {
