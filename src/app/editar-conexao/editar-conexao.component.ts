@@ -13,8 +13,11 @@ export class EditarConexaoComponent implements OnInit {
   public clientName: String;
   public connectionName: String;
   public endpoint: String;
+  public clientInitials: String;
 
   public clientes: Client[] = [];
+
+  public submitMessage: String;
 
   constructor(
     private clientesService: ClientesService) {
@@ -37,16 +40,25 @@ export class EditarConexaoComponent implements OnInit {
   ];
 
 
-  editClient(){
+  updateClient(){
     console.log(this.connectionName);
     console.log(this.clientName);
     console.log(this.endpoint);
 
+    if(this.clientName != ""){
+      this.submitMessage = "Client successfully updated";
+
+      this.clientName= "";
+      this.clientInitials= "";
+      this.connectionName= "";
+      this.endpoint= "";
+
+    }else{
+      this.submitMessage = "One or more fields are empty. All fields are required";
+    }
+
+    
   }
 
-  actualizarConexao(){
-    var num1 = ((document.getElementById("cli") as HTMLInputElement).value);
-    var num2 = ((document.getElementById("end") as HTMLInputElement).value);
-  }
 
 }

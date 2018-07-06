@@ -42,8 +42,10 @@
       <input class="form-control" type="text" id="end" placeholder="Endpoint Address"  [(ngModel)]="endpoint"  #varId="ngModel">
   
       <br>
-      <button [disabled]="!model.trim()" (click)="actualizarConexao()"> Update client </button>
+      <button [disabled]="!model.trim()" (click)="updateClient()"> Update client </button>
       <button [disabled]="!model.trim()" (click)="clientName=null; connectionName=null; endpoint=null"> Clear fields </button>
+      <br>
+      <textarea style="border: none; outline: none;color: #737373;font-family: Verdana;font-weight: lighter;" [(ngModel)]="submitMessage"></textarea>
   
     </div>
   </body>

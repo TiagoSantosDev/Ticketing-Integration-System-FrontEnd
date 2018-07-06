@@ -14,8 +14,8 @@
         <button id="button" (click)="addClientFields()" style="position: absolute;left: 170px; top: 315px;"> Add field</button>
         <p></p>
         <b>Client Specific fields</b>
-        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="levelNum">
-            <option *ngFor="let fieldA of ClientFields" [ngValue]="fieldA">{{fieldA}}</option>
+        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="clientField">
+            <option *ngFor="let clientField of ClientFields" [ngValue]="clientField">{{clientField}}</option>
         </select>
     </div>
 
@@ -33,15 +33,15 @@
         <p></p>
         <p></p>
 
-        <button id="button" ng-disabled="" (click)="getFields()" style="position: absolute; left: 560px;top: 500px;"> Add mapping</button>
+        <button id="button" ng-disabled="" (click)="addAssociation()" style="position: absolute; left: 560px;top: 500px;"> Add mapping</button>
         <button [disabled]="!model.trim()" (click)="clientField=null; olrField=null" style="position: absolute; left: 690px;top: 500px;"> Clear fields </button>
     </form>
 
 
     <div class="column" style="background-color:rgb(255, 255, 255); position: absolute; left: 1000px;top: 340px;">
         <b>OLR Specific fields</b>
-        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="levelNum">
-                <option *ngFor="let fieldB of OLRFields" [ngValue]="fieldB">{{fieldB}}</option>
+        <select multiple class="form-control" style='width:300px;height:150px;' type="text" [(ngModel)]="olrField">
+                <option *ngFor="let olrField of OLRFields" [ngValue]="olrField">{{olrField}}</option>
         </select>
     </div>
 
@@ -51,4 +51,7 @@
     <input class="form-control" type="text" id="cli" placeholder="Client Field" style="position: absolute; left: 410px;top: 410px; width:120px"  [(ngModel)]="clientField"  #varId="ngModel">
 
     <input class="form-control" type="text" placeholder="OLR Field"style="position: absolute; left: 810px;top: 410px; width:120px"  [(ngModel)]="olrField"  #varId="ngModel">
+
+    <br>
+    <textarea style="border: none; outline: none;color: #737373;font-family: Verdana;font-weight: lighter;" [(ngModel)]="submitMessage"></textarea>
 </div>

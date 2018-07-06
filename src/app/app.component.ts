@@ -23,11 +23,6 @@ export class AppComponent {
         this.cdr.detectChanges();
       });
 
-      console.log("Ola");
-
-
-
-
   }
   ngOnDestroy() {
     this.subscriptionAuth.unsubscribe();

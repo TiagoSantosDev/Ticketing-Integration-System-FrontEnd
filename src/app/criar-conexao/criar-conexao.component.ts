@@ -30,14 +30,16 @@ export class CriarConexaoComponent implements OnInit {
 
     if(this.clientName != ""){
       this.submitMessage = "Client successfully added";
+
+      this.clientName= "";
+      this.clientInitials= "";
+      this.connectionName= "";
+      this.endpoint= "";
     }else{
       this.submitMessage = "One or more fields are empty. All fields are required";
     }
 
-    this.clientName= "";
-    this.clientInitials= "";
-    this.connectionName= "";
-    this.endpoint= "";
+    
   }
 
   constructor(private router: Router) { }
