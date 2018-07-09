@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../models/client';
 import { ClientesService } from '../services/clientes.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-conexao',
@@ -44,6 +43,7 @@ export class EditarConexaoComponent implements OnInit {
     console.log(this.connectionName);
     console.log(this.clientName);
     console.log(this.endpoint);
+
 
     if(this.clientName != ""){
       this.submitMessage = "Client successfully updated";

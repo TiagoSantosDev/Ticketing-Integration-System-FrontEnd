@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   loading = false;
   error = '';
 
+  ola = 'ola';
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Client } from '../models/client';
 
 @Component({
   selector: 'app-criar-conexao',
@@ -16,16 +17,13 @@ export class CriarConexaoComponent implements OnInit {
 
   public submitMessage: String;
 
-  Clients: Array<String> = [
-    "Primark", "Sears", "Wiggle"
+  ClientList: Array<Client> = [
+    {name:'Primark',initials:'PRK',connectionName:'CN1',endpoint:'1'},
+    {name:'Sears',initials:'SRS',connectionName:'CN2',endpoint:'2'},
+    {name:'Wiggle',initials:'WGL',connectionName:'CN3',endpoint:'3'},
   ];
 
   addClient(){
-    console.log(this.connectionName);
-    console.log(this.clientName);
-    console.log(this.endpoint);
-
-
     if(this.clientName != ""){
       this.submitMessage = "Client successfully added";
 
@@ -37,6 +35,10 @@ export class CriarConexaoComponent implements OnInit {
       this.submitMessage = "One or more fields are empty. All fields are required";
     }
 
+  }
+
+  eraseMessage(){
+    this.submitMessage = "";
   }
 
   constructor(private router: Router) { }

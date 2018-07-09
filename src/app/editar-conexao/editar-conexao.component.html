@@ -6,6 +6,8 @@
   </head>
   
   <body>
+
+    <label style="color: #737373;font-family: Verdana;font-weight: lighter;position: absolute;left: 370px; top: 750px;">{{submitMessage}}</label>
     <div class="col-md-6 col-md-offset-3">
       <h1>Edit existing clients </h1>
 
@@ -35,7 +37,6 @@
       <button [disabled]="!model.trim()" (click)="updateClient()"> Update client </button>
       <button [disabled]="!model.trim()" (click)="clientName=null; connectionName=null; endpoint=null"> Clear fields </button>
       <br>
-      <textarea style="border: none; outline: none;color: #737373;font-family: Verdana;font-weight: lighter;" [(ngModel)]="submitMessage"></textarea>
   
     </div>
   </body>
