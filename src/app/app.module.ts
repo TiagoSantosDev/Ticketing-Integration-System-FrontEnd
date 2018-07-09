@@ -6,8 +6,6 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { MessageService }       from './message.service';
-import { MessagesComponent }    from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 
 import { ClientesService } from './services/clientes.service';
@@ -31,7 +29,6 @@ import { ConsultarHistoricoComponent } from './consultar-historico/consultar-his
   declarations: [
     AppComponent,
     DashboardComponent,
-    MessagesComponent,
     LoginComponent,
     RegisterComponent,
     ManageBoardComponent,
@@ -42,7 +39,6 @@ import { ConsultarHistoricoComponent } from './consultar-historico/consultar-his
   ],
   providers: [AuthGuard,
     AuthenticationService,
-    MessageService,
     RegisterService,
     ClientesService
    ],
