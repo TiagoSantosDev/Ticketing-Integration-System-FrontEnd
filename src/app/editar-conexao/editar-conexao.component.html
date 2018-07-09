@@ -9,37 +9,27 @@
     <div class="col-md-6 col-md-offset-3">
       <h1>Edit existing clients </h1>
 
-      <ng-container *ngFor="let client of clientes">
-        <tr>
-          <td>{{ client.nome }}</td>
-          <td>{{ client.initials }}</td>
-          <td>{{ client.connectionName }}</td>
-          <td>{{ client.endpoint}}</td>
-          <button (click) = "mostrarClientes(client.nome)"> Mostrar Cliente </button>
-        </tr>
-      </ng-container>
-
       <h2>Select client: </h2>
       <br>
   
-      <select class="form-control" type="text" [(ngModel)]="levelNum">
-          <option *ngFor="let client of Clients" [ngValue]="client">{{client}}</option>
+      <select class="form-control" type="text" [(ngModel)]="client" style="width:400px">
+          <option *ngFor="let client of ClientList" [ngValue]="client">{{client.name}}</option>
       </select>
 
       <h2>Edit client initials: </h2>
       <br>
   
-      <input class="form-control" type="text" id="cli" placeholder="Client Initials"  [(ngModel)]="clientName"  #varId="ngModel">
+      <input class="form-control" type="text" id="cli" placeholder="Client Initials"  [(ngModel)]="client.initials"  #varId="ngModel" style="width:400px">
   
       <h2>Edit connection name: </h2>
       <br>
   
-      <input class="form-control" type="text" id="cli" placeholder="Connection Name"  [(ngModel)]="connectionName"  #varId="ngModel">
+      <input class="form-control" type="text" id="cli" placeholder="Connection Name"  [(ngModel)]="client.connectionName"  #varId="ngModel" style="width:400px">
   
       <h2>Edit endpoint: </h2>
       <br>
   
-      <input class="form-control" type="text" id="end" placeholder="Endpoint Address"  [(ngModel)]="endpoint"  #varId="ngModel">
+      <input class="form-control" type="text" id="end" placeholder="Endpoint Address"  [(ngModel)]="client.endpoint"  #varId="ngModel" style="width:400px">
   
       <br>
       <button [disabled]="!model.trim()" (click)="updateClient()"> Update client </button>

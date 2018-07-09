@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   model: any = {};
   loading = false;
   error = '';
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,

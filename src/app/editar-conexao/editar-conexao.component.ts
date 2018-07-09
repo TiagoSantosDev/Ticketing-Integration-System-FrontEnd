@@ -34,11 +34,11 @@ export class EditarConexaoComponent implements OnInit {
 
   }
 
-  //List with all clients
-  Clients: Array<String> = [
-    "Primark", "Sears", "Wiggle"
+  ClientList: Array<Client> = [
+    {name:'Primark',initials:'PRK',connectionName:'CN1',endpoint:'1'},
+    {name:'Sears',initials:'SRS',connectionName:'CN2',endpoint:'2'},
+    {name:'Wiggle',initials:'WGL',connectionName:'CN3',endpoint:'3'},
   ];
-
 
   updateClient(){
     console.log(this.connectionName);

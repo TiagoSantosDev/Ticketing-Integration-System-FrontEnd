@@ -1,6 +1,6 @@
 export class Client {
     name: String;
-    client: String;
+    initials: String;
     connectionName: String; 
     endpoint: String;    
 }

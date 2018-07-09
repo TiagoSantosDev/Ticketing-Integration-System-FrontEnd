@@ -12,22 +12,22 @@
     <h2>Insert client name: </h2>
     <br>
 
-    <input class="form-control" type="text" id="cli" placeholder="Client Name"  [(ngModel)]="clientName"  #varId="ngModel" required="required" data-invalid-message="You must provide a valid email address.">
+    <input class="form-control" type="text" id="cli" placeholder="Client Name"  [(ngModel)]="clientName"  #varId="ngModel" required="required" style="width:400px" data-invalid-message="You must provide a valid email address.">
 
     <h2>Insert client initials: </h2>
     <br>
 
-    <input class="form-control" type="text" id="cli" placeholder="Client Initials"  [(ngModel)]="clientInitials"  #varId="ngModel" required>
+    <input class="form-control" type="text" id="cli" placeholder="Client Initials"  [(ngModel)]="clientInitials"  #varId="ngModel" style="width:400px" required>
 
     <h2>Insert connection name: </h2>
     <br>
 
-    <input class="form-control" type="text" id="connectionName" placeholder="Connection name"  [(ngModel)]="connectionName"  #varId="ngModel" required>
+    <input class="form-control" type="text" id="connectionName" placeholder="Connection name"  [(ngModel)]="connectionName"  #varId="ngModel" style="width:400px" required>
 
     <h2>Insert endpoint address: </h2>
     <br>
 
-    <input class="form-control" type="text" id="end" placeholder="Endpoint address"  [(ngModel)]="endpoint"  #varId="ngModel" required>
+    <input class="form-control" type="text" id="end" placeholder="Endpoint address"  [(ngModel)]="endpoint"  #varId="ngModel" style="width:400px" required>
 
     <br>
     <button [disabled]="!model.trim()" (click)="addClient()"> Add Client </button>

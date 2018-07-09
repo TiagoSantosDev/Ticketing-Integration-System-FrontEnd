@@ -1,7 +1,7 @@
 export class Log {
-    _id: string;
-    data : Date;
-    __v: string;
-    _status: Number;
-    _processed: Boolean;
+    id: String;
+    incident_nr: String;
+    date : String;
+    status: String;
+    httpcode: String;
 }
