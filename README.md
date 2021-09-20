@@ -5,12 +5,16 @@ The SPA allows the users to perform the following actions:
 
 #Add Client
 
-![Add Client](screens/addClient.png)
+![Add Client](screens/addClient.PNG)
 
 #Edit Client 
 
+![Edit Client](screens/EditClient.PNG)
 
 #Edit Mapping 
 
+![Edit Mapping ](screens/EditMapping.PNG)
 
-#Log History
+#View Log History
+
+![View Log History](screens/LogHistory.PNG)
