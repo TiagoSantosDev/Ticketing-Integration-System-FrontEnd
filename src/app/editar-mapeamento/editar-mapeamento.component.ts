@@ -15,6 +15,8 @@ export class EditarMapeamentoComponent implements OnInit {
 
   public submitMessage: String;
 
+  public ola:String;
+
   ClientSelectedFields: Array<String> = [];
   OLRSelectedFields: Array<String> = [];
 
@@ -22,6 +24,7 @@ export class EditarMapeamentoComponent implements OnInit {
     
     if (this.olrField != "" && this.clientField != "") {
       this.submitMessage = "Association successfully updated";
+      this.ola = "ola";
 
       this.ClientSelectedFields.push(this.clientField.toString());
       this.OLRSelectedFields.push(this.olrField.toString());
@@ -31,6 +34,11 @@ export class EditarMapeamentoComponent implements OnInit {
 
       console.log(this.ClientSelectedFields);
       console.log(this.OLRSelectedFields);
+
+      var n1 = this.ClientFields.indexOf(this.clientField);
+      var n2 = this.OLRFields.indexOf(this.olrField);
+
+      this.ClientFields.splice(n1);
 
       
     } else {
@@ -51,7 +59,7 @@ export class EditarMapeamentoComponent implements OnInit {
 
 
   ClientFields: Array<String> = [
-    "Type", "Date", "OpenedBy"
+    
   ];
 
   //Static list with all of OLR Fields.

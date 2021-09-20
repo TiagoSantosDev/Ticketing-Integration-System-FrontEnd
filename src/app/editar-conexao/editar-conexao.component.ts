@@ -40,12 +40,8 @@ export class EditarConexaoComponent implements OnInit {
   ];
 
   updateClient(){
-    console.log(this.connectionName);
-    console.log(this.clientName);
-    console.log(this.endpoint);
 
-
-    if(this.clientName != ""){
+    if(this.clientName != "" && this.clientInitials != "" && this.connectionName != "" && this.endpoint != ""){
       this.submitMessage = "Client successfully updated";
 
       this.clientName= "";

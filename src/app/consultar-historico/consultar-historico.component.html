@@ -8,17 +8,15 @@
 
 
 <div>
-    <div class="panel panel-default" style="width:700px; position: absolute;left: 500px; top: 180px;">
+    <div class="panel panel-default" style="width:700px; position: absolute;left: 370px; top: 180px;">
         <h1>
             Consult logs
         </h1>
 
-        <div class="panel-heading" data-toggle="collapse" ng-init="row.down=true" ng-click="row.down = !row.down">
+        <div class="panel-heading" data-toggle="collapse">
             <span>
                 <strong>Ticket History</strong>
             </span>
-            <i ng-show="row.down" class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
-            <i ng-show="!row.down" class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
         </div>
 
         <div class="collapse in">
@@ -37,7 +35,13 @@
                     <tr>
                         <td class="col-md-4 tr-hover">{{log.id}}</td>
                         <td class="col-md-4 tr-hover">{{log.incident_nr}}</td>
-                        <td class="col-md-4 tr-hover">{{log.status}}</td>
+                        <td class="col-md-4 tr-hover">
+                            <div *ngIf="log.status ==='Y'"><img src="https://image.freepik.com/free-icon/check-mark-white-on-black-circular-background_318-44226.jpg"
+                                style="float:center; height: 35px; width:35px; left: 10px"></div>
+                            <div *ngIf="log.status ==='N'"><img src="https://img.tineye.com/result/fe6e8eb7a9a0b1c96a002cb1dd3d2dfd8b11e34eff619239e1edbf2be35b0c2c?size=160"
+                                    style="float:center; height: 40px; width:40px"></div>
+                        </td>
+
                         <td class="col-md-4 tr-hover">{{log.date}}</td>
                         <td class="col-md-4 tr-hover">{{log.httpcode}}</td>
                     </tr>

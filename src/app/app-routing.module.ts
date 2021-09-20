@@ -11,7 +11,8 @@ import { ConsultarHistoricoComponent } from './consultar-historico/consultar-his
 
 //ManageBoardComponent
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'criar-conexao', component: CriarConexaoComponent },

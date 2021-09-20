@@ -1,7 +1,7 @@
   
   <body>
 
-    <label style="color: #737373;font-family: Verdana;font-weight: lighter;position: absolute;left: 370px; top: 750px;">{{submitMessage}}</label>
+    <label style="color: #737373;font-family: Verdana;font-weight: lighter;position: absolute;left: 530px; top: 760px;">{{submitMessage}}</label>
     <div class="col-md-6 col-md-offset-3">
       <h1>Edit existing clients </h1>
 
@@ -29,7 +29,7 @@
   
       <br>
       <button [disabled]="!model.trim()" (click)="updateClient()"> Update client </button>
-      <button [disabled]="!model.trim()" (click)="clientName=null; connectionName=null; endpoint=null"> Clear fields </button>
+      <button [disabled]="!model.trim()" (click)="client.initials=null; client.connectionName=null; client.endpoint=null"> Clear fields </button>
       <br>
   
     </div>

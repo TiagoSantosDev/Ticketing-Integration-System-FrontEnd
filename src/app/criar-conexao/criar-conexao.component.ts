@@ -24,7 +24,7 @@ export class CriarConexaoComponent implements OnInit {
   ];
 
   addClient(){
-    if(this.clientName != ""){
+    if(this.clientName != "" && this.clientInitials != "" && this.connectionName != "" && this.endpoint != ""){
       this.submitMessage = "Client successfully added";
 
       this.clientName= "";
